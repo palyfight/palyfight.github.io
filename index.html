@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Fullbody Workout Generator</title>
+	</head>
+
+	<body>
+		<div id="main">
+			<ul id="workout">
+				<li id="shoulder"></li>
+				<li id="bicep"></li>
+				<li id="back"></li>
+				<li id="tricep"></li>
+				<li id="chest"></li>
+				<li id="leg"></li>
+			</ul>
+		</div>
+	</body>
+
+	<script>
+			function getRandomInt(min, max) {
+	    		return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+
+			var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
+			var biceps = ["barbell bicep curls", "hammer curls", "preacher curls", "21(7-7-7)"];
+			var backs = ["bent-over row", "lat pulldown", "chin up", "deadlift"];
+			var triceps = ["cable tricep pushdown", "dips", "close-grip benchpress", "skullcrusher"];
+			var chests = ["bench press", "incline dumbell press", "decline bench press", "dumbell press"];
+			var legs = ["barbell squats", "dumbell lunges", "leg press", "leg curl"];
+
+			var shoulder = shoulders[getRandomInt(0,3)];
+			var shoulder_li = document.getElementById("shoulder");
+			shoulder_li.innerHTML = shoulder;
+
+			var bicep = biceps[getRandomInt(0,3)];
+			var bicep_li = document.getElementById("bicep");
+			bicep_li.innerHTML = bicep;
+
+			var back = backs[getRandomInt(0,3)];
+			var back_li = document.getElementById("back");
+			back_li.innerHTML = back;
+
+			var tricep = triceps[getRandomInt(0,3)];
+			var tricep_li = document.getElementById("tricep");
+			tricep_li.innerHTML = tricep;
+
+			var chest = chests[getRandomInt(0,3)];
+			var chest_li = document.getElementById("chest");
+			chest_li.innerHTML = chest;
+
+			var leg = legs[getRandomInt(0,3)];
+			var leg_li = document.getElementById("leg");
+			leg_li.innerHTML = leg;
+		</script>
+
+</html>
