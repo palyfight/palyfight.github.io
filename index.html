@@ -1,19 +1,32 @@
 <html>
 	<head>
-		<title>Fullbody Workout Generator</title>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Semi-random Workout Generator</title>
+		<!-- Fontawesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Bulma -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
 	</head>
 
 	<body>
-		<div id="main">
-			<ul id="workout">
-				<li>3 x 10-12: <span id="shoulder"></span></li>
-				<li>3 x 10-12: <span id="bicep"></span></li>
-				<li>3 x 10-12: <span id="chest"></span></li>
-				<li>3 x 10-12: <span id="back"></span></li>
-				<li>3 x 10-12: <span id="tricep"></span></li>
-				<li>3 x 10-12: <span id="leg"></span></li>
-			</ul>
-		</div>
+		<section class="section">
+			<div class="container">
+				<h1 class="title">
+					Full Body Workout
+				</h1>
+				<div id="main">
+					<ul id="workout">
+						<li>3 x 10-12: <span id="shoulder"></span></li>
+						<li>3 x 10-12: <span id="back"></span></li>
+						<li>3 x 10-12: <span id="chest"></span></li>
+						<li>3 x 10-12: <span id="bicep"></span></li>
+						<li>3 x 10-12: <span id="leg"></span></li>
+						<li>3 x 10-12: <span id="tricep"></span></li>
+					</ul>
+				</div>
+			</div>
+		</section>
 	</body>
 
 	<script>
@@ -25,7 +38,11 @@
 				var index = getRandomInt(min,max);
 				var exercise = exercises[index];
 				var li_element = document.getElementById(muscle);
-				li_element.innerHTML = exercise
+				li_element.innerHTML = capitalizeFirstLetter(exercise);
+			}
+
+			function capitalizeFirstLetter(string) {
+    			return string.charAt(0).toUpperCase() + string.slice(1);
 			}
 
 			var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
@@ -43,7 +60,5 @@
 
 		</script>
 </html>
-
-
 
 
