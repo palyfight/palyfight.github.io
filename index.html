@@ -8,9 +8,9 @@
 			<ul id="workout">
 				<li>3 x 10-12: <span id="shoulder"></span></li>
 				<li>3 x 10-12: <span id="bicep"></span></li>
+				<li>3 x 10-12: <span id="chest"></span></li>
 				<li>3 x 10-12: <span id="back"></span></li>
 				<li>3 x 10-12: <span id="tricep"></span></li>
-				<li>3 x 10-12: <span id="chest"></span></li>
 				<li>3 x 10-12: <span id="leg"></span></li>
 			</ul>
 		</div>
@@ -23,9 +23,9 @@
 
 			function replaceSpan(muscle, exercises, min, max){
 				var index = getRandomInt(min,max);
-				var exercice = exercises[index];
+				var exercise = exercises[index];
 				var li_element = document.getElementById(muscle);
-				li_element.innerHTML = exercice
+				li_element.innerHTML = exercise
 			}
 
 			var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
@@ -35,11 +35,15 @@
 			var chests = ["bench press", "incline dumbell press", "decline bench press", "dumbell press"];
 			var legs = ["barbell squats", "dumbell lunges", "leg press", "leg curl"];
 
-			replaceSpan("shoulder", shoulders, 0, 3);
-			replaceSpan("bicep", biceps, 0, 3);
-			replaceSpan("back", backs, 0, 3);
-			replaceSpan("tricep", triceps, 0, 3);
-			replaceSpan("chest", chests, 0, 3);
-			replaceSpan("leg", legs, 0, 3);
+			var muscles = [[shoulders,"shoulder"], [biceps,"bicep"], [backs,"back"], [triceps,"tricep"], [chests,"chest"], [legs,"leg"]];
+			var i, len;
+			for (i = 0, len = muscles.length; i < len; ++i) {
+			    replaceSpan(muscles[i][1], muscles[i][0], 0, 3);
+			};
+
 		</script>
 </html>
+
+
+
+
