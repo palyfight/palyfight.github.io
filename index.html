@@ -6,12 +6,12 @@
 	<body>
 		<div id="main">
 			<ul id="workout">
-				<li id="shoulder"></li>
-				<li id="bicep"></li>
-				<li id="back"></li>
-				<li id="tricep"></li>
-				<li id="chest"></li>
-				<li id="leg"></li>
+				<li>3 x 10-12: <span id="shoulder"></span></li>
+				<li>3 x 10-12: <span id="bicep"></span></li>
+				<li>3 x 10-12: <span id="back"></span></li>
+				<li>3 x 10-12: <span id="tricep"></span></li>
+				<li>3 x 10-12: <span id="chest"></span></li>
+				<li>3 x 10-12: <span id="leg"></span></li>
 			</ul>
 		</div>
 	</body>
@@ -21,6 +21,13 @@
 	    		return Math.floor(Math.random() * (max - min + 1)) + min;
 			}
 
+			function replaceSpan(muscle, exercises, min, max){
+				var index = getRandomInt(min,max);
+				var exercice = exercises[index];
+				var li_element = document.getElementById(muscle);
+				li_element.innerHTML = exercice
+			}
+
 			var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
 			var biceps = ["barbell bicep curls", "hammer curls", "preacher curls", "21(7-7-7)"];
 			var backs = ["bent-over row", "lat pulldown", "chin up", "deadlift"];
@@ -28,29 +35,11 @@
 			var chests = ["bench press", "incline dumbell press", "decline bench press", "dumbell press"];
 			var legs = ["barbell squats", "dumbell lunges", "leg press", "leg curl"];
 
-			var shoulder = shoulders[getRandomInt(0,3)];
-			var shoulder_li = document.getElementById("shoulder");
-			shoulder_li.innerHTML = shoulder;
-
-			var bicep = biceps[getRandomInt(0,3)];
-			var bicep_li = document.getElementById("bicep");
-			bicep_li.innerHTML = bicep;
-
-			var back = backs[getRandomInt(0,3)];
-			var back_li = document.getElementById("back");
-			back_li.innerHTML = back;
-
-			var tricep = triceps[getRandomInt(0,3)];
-			var tricep_li = document.getElementById("tricep");
-			tricep_li.innerHTML = tricep;
-
-			var chest = chests[getRandomInt(0,3)];
-			var chest_li = document.getElementById("chest");
-			chest_li.innerHTML = chest;
-
-			var leg = legs[getRandomInt(0,3)];
-			var leg_li = document.getElementById("leg");
-			leg_li.innerHTML = leg;
+			replaceSpan("shoulder", shoulders, 0, 3);
+			replaceSpan("bicep", biceps, 0, 3);
+			replaceSpan("back", backs, 0, 3);
+			replaceSpan("tricep", triceps, 0, 3);
+			replaceSpan("chest", chests, 0, 3);
+			replaceSpan("leg", legs, 0, 3);
 		</script>
-
 </html>
