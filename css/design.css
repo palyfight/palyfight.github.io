@@ -1,26 +1,29 @@
-body{margin:0;
-padding: 0;}
-
-
-.title{font-family:'Oleo Script', cursive;
-color: white;
-font-size: 40px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-section{
-	background-color: rgb(25,25,112);
-	color:white;
-	padding: 10px 50px;
-	
+.title {
+  font-family: 'Oleo Script', cursive;
+  color: white;
+  font-size: 40px;
+}
+
+section {
+  background-color: rgb(25, 25, 112);
+  color: white;
+  padding: 10px 50px;
 }
 
 li:before {
-    content: '✔';   
-   padding: 2px;
-   font-size: 20px;
-   color: yellow;
-	
+  content: '✔';
+  padding: 2px;
+  font-size: 20px;
+  color: yellow;
 }
 
-.hline{border-bottom: 1px;
+.hline {
+  margin: 0;
+  /*border: solid 1px white;
+  border-bottom: 1px;
 }

@@ -1,28 +1,32 @@
 <html>
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Semi-random Workout Generator</title>
-		<!-- Bulma -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
-		<link rel="stylesheet" href="css/design.css">
-		
-		<style>
-			/* li { background: #d3e1ee; }
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Semi-random Workout Generator</title>
+	<!-- Bulma -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/design.css">
+
+	<style>
+		/* li { background: #d3e1ee; }
 			li:nth-child(odd) { background: #92b6d5; }*/
-		</style>
-	</head>
+	</style>
+</head>
 
 <body>
 	<section class="section">
 		<div class="container">
 			<h1 class="title">
 				Full Body Workout
-				<img src="reload.png" alt="Reload_Page" style="width:20px;height:20px;" title="Reload Page" onclick="location.reload(true);">
-				<hr class="hline">
 			</h1>
+		</div>
+	</section>
+	<hr class="hline">
+	<section class="section">
+		<div class="container">
 			<div id="main">
 				<ul id="workout">
 					<li>3 x 10-12: <span id="shoulder"></span></li>
@@ -39,18 +43,18 @@
 
 <script>
 	function getRandomInt(min, max) {
-	    return Math.floor(Math.random() * (max - min + 1)) + min;
+		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 
 	function replaceSpan(muscle, exercises, min, max) {
-	    var index = getRandomInt(min, max);
-	    var exercise = exercises[index];
-	    var li_element = document.getElementById(muscle);
-	    li_element.innerHTML = capitalizeFirstLetter(exercise);
+		var index = getRandomInt(min, max);
+		var exercise = exercises[index];
+		var li_element = document.getElementById(muscle);
+		li_element.innerHTML = capitalizeFirstLetter(exercise);
 	}
 
 	function capitalizeFirstLetter(string) {
-	    return string.charAt(0).toUpperCase() + string.slice(1);
+		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 
 	var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
@@ -60,7 +64,14 @@
 	var chests = ["dumbell bench press", "dumbell bench press", "incline dumbell press", "chest fly"];
 	var legs = ["smith machine box squats", "dumbell lunges", "dumbell lunges", "leg curls"];
 
-	var muscles = [[shoulders, "shoulder"], [biceps, "bicep"], [backs, "back"], [triceps, "tricep"], [chests, "chest"], [legs, "leg"]];
+	var muscles = [
+		[shoulders, "shoulder"],
+		[biceps, "bicep"],
+		[backs, "back"],
+		[triceps, "tricep"],
+		[chests, "chest"],
+		[legs, "leg"]
+	];
 	var i, len;
 	for (i = 0, len = muscles.length; i < len; ++i) {
 		replaceSpan(muscles[i][1], muscles[i][0], 0, 3);
