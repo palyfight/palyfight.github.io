@@ -1,0 +1,28 @@
+body{margin:0;
+padding: 0;}
+
+
+.title{font-family:'Oleo Script', cursive;
+color: white;
+font-size: 40px;
+}
+
+section{
+	background-color: rgb(25,25,112);
+	color:white;
+	padding: 10px 50px;
+	
+}
+
+li:before {
+    content: '✔';   
+   padding: 2px;
+   font-size: 20px;
+   color: yellow;
+	
+}
+
+.hline{width: 800px;
+float: right;
+border: solid 1px white;
+}
