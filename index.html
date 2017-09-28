@@ -30,18 +30,18 @@
 
 <script>
 	function getRandomInt(min, max) {
-		return Math.floor(Math.random() * (max - min + 1)) + min;
+	    return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 
 	function replaceSpan(muscle, exercises, min, max) {
-		var index = getRandomInt(min, max);
-		var exercise = exercises[index];
-		var li_element = document.getElementById(muscle);
-		li_element.innerHTML = capitalizeFirstLetter(exercise);
+	    var index = getRandomInt(min, max);
+	    var exercise = exercises[index];
+	    var li_element = document.getElementById(muscle);
+	    li_element.innerHTML = capitalizeFirstLetter(exercise);
 	}
 
 	function capitalizeFirstLetter(string) {
-		return string.charAt(0).toUpperCase() + string.slice(1);
+	    return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 
 	var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
