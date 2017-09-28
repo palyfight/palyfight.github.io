@@ -1,0 +1,7 @@
+#workout li:nth-child(odd) {
+    background: #d2d2d2;
+}
+
+#workout li:nth-child(even) {
+    background: #e3e3e3;
+}
