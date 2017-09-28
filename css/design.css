@@ -22,7 +22,5 @@ li:before {
 	
 }
 
-.hline{width: 800px;
-float: right;
-border: solid 1px white;
+.hline{border-bottom: 1px;
 }
