@@ -1,54 +1,53 @@
-<html>
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Semi-random Workout Generator</title>
-		<!-- Bulma -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
-		<link rel="stylesheet" href="css/design.css">
-		
-		<style>
-			/* li { background: #d3e1ee; }
-			li:nth-child(odd) { background: #92b6d5; }*/
-		</style>
-	</head>
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Semi-random Workout Generator</title>
+	<!-- Bulma -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/design.css">
+</head>
 
 <body>
 	<section class="section">
 		<div class="container">
 			<h1 class="title">
-				Full Body Workout<hr class="hline">
+				Full Body Workout
 			</h1>
 			<div id="main">
 				<ul id="workout">
-					<li>3 x 10-12: <span id="shoulder"></span></li>
-					<li>3 x 10-12: <span id="back"></span></li>
-					<li>3 x 10-12: <span id="chest"></span></li>
-					<li>3 x 10-12: <span id="bicep"></span></li>
-					<li>3 x 10-12: <span id="leg"></span></li>
-					<li>3 x 10-12: <span id="tricep"></span></li>
+					<li id="exerciseCard1" onClick="completedTask(this.id)" ><span id="shoulder"></span><br>3 x 10-12 </li>
+					<li id="exerciseCard2" onClick="completedTask(this.id)" ><span id="back"></span><br>3 x 10-12</li>
+					<li id="exerciseCard3" onClick="completedTask(this.id)" ><span id="chest"></span><br>3 x 10-12</li>
+					<li id="exerciseCard4" onClick="completedTask(this.id)" ><span id="bicep"></span><br>3 x 10-12</li>
+					<li id="exerciseCard5" onClick="completedTask(this.id)" ><span id="leg"></span><br>3 x 10-12</li>
+					<li id="exerciseCard6" onClick="completedTask(this.id)" ><span id="tricep"></span><br>3 x 10-12</li>
 				</ul>
 			</div>
 		</div>
 	</section>
-</body>
 
-<script>
+
+	<script>
+
+	function completedTask(clicked_id) {
+		document.getElementById(clicked_id).className += " clickedExerciseCard";
+		document.getElementById(clicked_id).className += " clickedExerciseCard:hover";
+	};
+
 	function getRandomInt(min, max) {
-	    return Math.floor(Math.random() * (max - min + 1)) + min;
+		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 
 	function replaceSpan(muscle, exercises, min, max) {
-	    var index = getRandomInt(min, max);
-	    var exercise = exercises[index];
-	    var li_element = document.getElementById(muscle);
-	    li_element.innerHTML = capitalizeFirstLetter(exercise);
+		var index = getRandomInt(min, max);
+		var exercise = exercises[index];
+		var li_element = document.getElementById(muscle);
+		li_element.innerHTML = capitalizeFirstLetter(exercise);
 	}
 
 	function capitalizeFirstLetter(string) {
-	    return string.charAt(0).toUpperCase() + string.slice(1);
+		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 
 	var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
@@ -63,6 +62,9 @@
 	for (i = 0, len = muscles.length; i < len; ++i) {
 		replaceSpan(muscles[i][1], muscles[i][0], 0, 3);
 	};
-</script>
 
-</html>
+
+	</script>
+
+
+</body></html>
