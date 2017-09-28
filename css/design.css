@@ -24,5 +24,6 @@ li:before {
 
 .hline {
   margin: 0;
-  border: solid 1px white;
+  /*border: solid 1px white;
+  border-bottom: 1px;
 }
