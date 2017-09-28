@@ -1,0 +1,9 @@
+.workout li:nth-child(2n+1) {
+	background: #f3f3f3;
+}
+.workout li {
+	padding: 0.5em 1.5em;
+}
+.workout {
+	max-width: 400px;
+}
