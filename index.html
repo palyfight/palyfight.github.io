@@ -1,64 +1,61 @@
 <html>
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Semi-random Workout Generator</title>
-		<!-- Bulma -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-	</head>
 
-	<body>
-		<section class="section">
-			<div class="container">
-				<h1 class="title">
-					Full Body Workout
-				</h1>
-				<div id="main">
-					<ul id="workout">
-						<li>3 x 10-12: <span id="shoulder"></span></li>
-						<li>3 x 10-12: <span id="back"></span></li>
-						<li>3 x 10-12: <span id="chest"></span></li>
-						<li>3 x 10-12: <span id="bicep"></span></li>
-						<li>3 x 10-12: <span id="leg"></span></li>
-						<li>3 x 10-12: <span id="tricep"></span></li>
-					</ul>
-				</div>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Semi-random Workout Generator</title>
+	<!-- Bulma -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+</head>
+
+<body>
+	<section class="section">
+		<div class="container">
+			<h1 class="title">
+				Full Body Workout
+			</h1>
+			<div id="main">
+				<ul id="workout">
+					<li>3 x 10-12: <span id="shoulder"></span></li>
+					<li>3 x 10-12: <span id="back"></span></li>
+					<li>3 x 10-12: <span id="chest"></span></li>
+					<li>3 x 10-12: <span id="bicep"></span></li>
+					<li>3 x 10-12: <span id="leg"></span></li>
+					<li>3 x 10-12: <span id="tricep"></span></li>
+				</ul>
 			</div>
-		</section>
-	</body>
+		</div>
+	</section>
+</body>
 
-	<script>
-			function getRandomInt(min, max) {
-	    		return Math.floor(Math.random() * (max - min + 1)) + min;
-			}
+<script>
+	function getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
 
-			function replaceSpan(muscle, exercises, min, max){
-				var index = getRandomInt(min,max);
-				var exercise = exercises[index];
-				var li_element = document.getElementById(muscle);
-				li_element.innerHTML = capitalizeFirstLetter(exercise);
-			}
+	function replaceSpan(muscle, exercises, min, max) {
+		var index = getRandomInt(min, max);
+		var exercise = exercises[index];
+		var li_element = document.getElementById(muscle);
+		li_element.innerHTML = capitalizeFirstLetter(exercise);
+	}
 
-			function capitalizeFirstLetter(string) {
-    			return string.charAt(0).toUpperCase() + string.slice(1);
-			}
+	function capitalizeFirstLetter(string) {
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	}
 
-			var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
-			var biceps = ["dumbell alternating bicep curls", "hammer curls", "preacher curls", "21(7-7-7)"];
-			var backs = ["cable row", "reverse grip lat pulldown", "kneeling one arm row", "dumbell bent-over row"];
-			var triceps = ["dips", "push-ups (mix)", "push-ups (mix)", "lying triceps extensions"];
-			var chests = ["dumbell bench press", "dumbell bench press", "incline dumbell press", "chest fly"];
-			var legs = ["smith machine box squats", "dumbell lunges", "dumbell lunges", "leg curls"];
+	var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
+	var biceps = ["dumbell alternating bicep curls", "hammer curls", "preacher curls", "21(7-7-7)"];
+	var backs = ["cable row", "reverse grip lat pulldown", "kneeling one arm row", "dumbell bent-over row"];
+	var triceps = ["dips", "push-ups (mix)", "push-ups (mix)", "lying triceps extensions"];
+	var chests = ["dumbell bench press", "dumbell bench press", "incline dumbell press", "chest fly"];
+	var legs = ["smith machine box squats", "dumbell lunges", "dumbell lunges", "leg curls"];
 
-			var muscles = [[shoulders,"shoulder"], [biceps,"bicep"], [backs,"back"], [triceps,"tricep"], [chests,"chest"], [legs,"leg"]];
-			var i, len;
-			for (i = 0, len = muscles.length; i < len; ++i) {
-			    replaceSpan(muscles[i][1], muscles[i][0], 0, 3);
-			};
+	var muscles = [[shoulders, "shoulder"], [biceps, "bicep"], [backs, "back"], [triceps, "tricep"], [chests, "chest"], [legs, "leg"]];
+	var i, len;
+	for (i = 0, len = muscles.length; i < len; ++i) {
+		replaceSpan(muscles[i][1], muscles[i][0], 0, 3);
+	};
+</script>
 
-		</script>
 </html>
-
-
-
-
