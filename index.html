@@ -6,14 +6,10 @@
 	<title>Semi-random Workout Generator</title>
 	<!-- Bulma -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/design.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/design.css">
-
-	<style>
-		/* li { background: #d3e1ee; }
-			li:nth-child(odd) { background: #92b6d5; }*/
-	</style>
 </head>
 
 <body>
@@ -29,19 +25,25 @@
 		<div class="container">
 			<div id="main">
 				<ul id="workout">
-					<li>3 x 10-12: <span id="shoulder"></span></li>
-					<li>3 x 10-12: <span id="back"></span></li>
-					<li>3 x 10-12: <span id="chest"></span></li>
-					<li>3 x 10-12: <span id="bicep"></span></li>
-					<li>3 x 10-12: <span id="leg"></span></li>
-					<li>3 x 10-12: <span id="tricep"></span></li>
+					<li id="exerciseCard1" onClick="completedTask(this.id)" ><span id="shoulder"></span><br>3 x 10-12 </li>
+					<li id="exerciseCard2" onClick="completedTask(this.id)" ><span id="back"></span><br>3 x 10-12</li>
+					<li id="exerciseCard3" onClick="completedTask(this.id)" ><span id="chest"></span><br>3 x 10-12</li>
+					<li id="exerciseCard4" onClick="completedTask(this.id)" ><span id="bicep"></span><br>3 x 10-12</li>
+					<li id="exerciseCard5" onClick="completedTask(this.id)" ><span id="leg"></span><br>3 x 10-12</li>
+					<li id="exerciseCard6" onClick="completedTask(this.id)" ><span id="tricep"></span><br>3 x 10-12</li>
 				</ul>
 			</div>
 		</div>
 	</section>
-</body>
 
-<script>
+
+	<script>
+
+	function completedTask(clicked_id) {
+		document.getElementById(clicked_id).className += " clickedExerciseCard";
+		document.getElementById(clicked_id).className += " clickedExerciseCard:hover";
+	};
+
 	function getRandomInt(min, max) {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
@@ -76,6 +78,9 @@
 	for (i = 0, len = muscles.length; i < len; ++i) {
 		replaceSpan(muscles[i][1], muscles[i][0], 0, 3);
 	};
-</script>
 
-</html>
+
+	</script>
+
+
+</body></html>
