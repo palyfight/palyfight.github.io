@@ -1,4 +1,6 @@
-<html><head>
+<html>
+
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Semi-random Workout Generator</title>
@@ -6,6 +8,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/design.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
 </head>
 
 <body>
@@ -14,6 +18,11 @@
 			<h1 class="title">
 				Full Body Workout
 			</h1>
+		</div>
+	</section>
+	<hr class="hline">
+	<section class="section">
+		<div class="container">
 			<div id="main">
 				<ul id="workout">
 					<li id="exerciseCard1" onClick="completedTask(this.id)" ><span id="shoulder"></span><br>3 x 10-12 </li>
@@ -57,7 +66,14 @@
 	var chests = ["dumbell bench press", "dumbell bench press", "incline dumbell press", "chest fly"];
 	var legs = ["smith machine box squats", "dumbell lunges", "dumbell lunges", "leg curls"];
 
-	var muscles = [[shoulders, "shoulder"], [biceps, "bicep"], [backs, "back"], [triceps, "tricep"], [chests, "chest"], [legs, "leg"]];
+	var muscles = [
+		[shoulders, "shoulder"],
+		[biceps, "bicep"],
+		[backs, "back"],
+		[triceps, "tricep"],
+		[chests, "chest"],
+		[legs, "leg"]
+	];
 	var i, len;
 	for (i = 0, len = muscles.length; i < len; ++i) {
 		replaceSpan(muscles[i][1], muscles[i][0], 0, 3);
