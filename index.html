@@ -9,40 +9,73 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/design.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
 </head>
 
 <body>
-	<section class="section">
-		<div class="container">
-			<h1 class="title">
-				Full Body Workout
-			</h1>
-		</div>
-	</section>
-	<hr class="hline">
-	<section class="section">
-		<div class="container">
-			<div id="main">
-				<ul id="workout">
-					<li id="exerciseCard1" onClick="completedTask(this.id)" ><span id="shoulder"></span><br>3 x 10-12 </li>
-					<li id="exerciseCard2" onClick="completedTask(this.id)" ><span id="back"></span><br>3 x 10-12</li>
-					<li id="exerciseCard3" onClick="completedTask(this.id)" ><span id="chest"></span><br>3 x 10-12</li>
-					<li id="exerciseCard4" onClick="completedTask(this.id)" ><span id="bicep"></span><br>3 x 10-12</li>
-					<li id="exerciseCard5" onClick="completedTask(this.id)" ><span id="leg"></span><br>3 x 10-12</li>
-					<li id="exerciseCard6" onClick="completedTask(this.id)" ><span id="tricep"></span><br>3 x 10-12</li>
-				</ul>
+	<div class="conatinAll">
+		<section class="section">
+			<div class="container">
+				<h1 class="title">
+					Full Body Workout
+					<div></div>
+				</h1>
 			</div>
-		</div>
-	</section>
+		</section>
+		<!-- <hr class="hline"> -->
+		<section class="section">
+			<div class="container">
+				<div id="main">
+					<ul id="workout">
+						<li id="exerciseCard1" onClick="completedTask(this.id)" class="exerciseCard"><p class="checkedCardMark">&#10003;</p><span id="shoulder"></span><br>3 x 10-12 </li>
+						<li id="exerciseCard2" onClick="completedTask(this.id)" class="exerciseCard"><p class="checkedCardMark">&#10003;</p><span id="back"></span><br>3 x 10-12</li>
+						<li id="exerciseCard3" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="chest"></span><br>3 x 10-12</li>
+						<li id="exerciseCard4" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="bicep"></span><br>3 x 10-12</li>
+						<li id="exerciseCard5" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="leg"></span><br>3 x 10-12</li>
+						<li id="exerciseCard6" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="tricep"></span><br>3 x 10-12</li>
+					</ul>
+				</div>
+				<div class="buttons">
+					<div class="statusBtn markallBtn" onClick="markAllCardsAsComplete()"><span>Mark All As Completed</span></div>
+					<div class="statusBtn refreshBtn" onClick="resetAllCards()"><span>Refresh All</span></div>
+				</div>
+			</div>
+		</section>
+	</div>
 
 
 	<script>
 
 	function completedTask(clicked_id) {
 		document.getElementById(clicked_id).className += " clickedExerciseCard";
-		document.getElementById(clicked_id).className += " clickedExerciseCard:hover";
+		document.getElementById(clicked_id).children[0].style.visibility="visible";
 	};
+	function markAllCardsAsComplete() {
+		var items = document.getElementsByClassName("exerciseCard");
+		for (var i=0; i < items.length; i++) {
+			items[i].className += " clickedExerciseCard";
+			items[i].className += " clickedExerciseCard:hover";
+
+		}
+		var items = document.getElementsByClassName("checkedCardMark");
+		for (var i=0; i < items.length; i++) {
+			items[i].style.visibility = "visible";
+
+
+		}
+
+	}
+	function resetAllCards() {
+		var items = document.getElementsByClassName("exerciseCard");
+		for (var i=0; i < items.length; i++) {
+			items[i].className = " exerciseCard";
+		}
+		var items = document.getElementsByClassName("checkedCardMark");
+		for (var i=0; i < items.length; i++) {
+			items[i].style.visibility = "hidden";
+
+
+		}
+	}
 
 	function getRandomInt(min, max) {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -83,4 +116,6 @@
 	</script>
 
 
-</body></html>
+</body>
+
+</html>
