@@ -2,5 +2,9 @@
 
 This static web page is hosted as a GitHub Page, we are trying to keep it as simple as possible so that it can be used quickly by anyone. 
 
+## To see webpage, go to below link:
+
+https://palyfight.github.io/palyfight.github.io/index.html
+
 ## Purpose
 This will generate a semi-random list of 6 exercices for a simple full body workout. The page is compatible with mobile and desktop by using responsive CSS. 
