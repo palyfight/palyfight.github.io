@@ -1,181 +1,149 @@
 <html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Semi-random Workout Generator</title>
-	<!-- Bulma -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="css/design.css">
-</head>
-
-<body>
-	
-	
-	
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-           <div class="navbar-header">
-			<a class="navbar-brand" href="#">GYM</a>
-		   </div>
-	<ul class="nav navbar-right">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">What we offer</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>	
-    </div>
-</nav>
-	
-	
-	<!-- Header video -->
-	<div  class="container-fluid">
-        <div class="row">
-                  
-          <video autoplay loop muted poster="screenshot.jpg" id="headerbackground" class="col-md-12">
-	         <source src="images/Full Body Superset Workout _ Scott Mathison.mp4" type="video/mp4">
-  	     </video>
-		 
-                             
-        </div>
-    </div>
-	
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Semi-random Workout Generator</title>
+		<!-- Bulma -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/design.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+		        <div class="navbar-header">
+					<a class="navbar-brand" href="#">GYM</a>
+				</div>
+				<ul class="nav navbar-right">
+			      	<li><a href="#">Home</a></li>
+			      	<li><a href="#aboutus">About Us</a></li>
+			      	<li><a href="#whatweoffer">What we offer</a></li>
+			    </ul>	
+		    </div>
+		</nav>
 		
-	<!-- About us -->	
-	<div  class="container-fluid">
-        <div class="row">
-        
-          <div id="aboutus" class="col-md-12 col-sm-6">
-           <h1 class="h2data">About Us</h1>
-		    <p>We are best in Gym activities. We provide you enumerous types of body workout. Our customer are most important for us. If you are looking for best body workout in your area, in affordable price then must visit here. We are best in Gym activities. We provide you enumerous types of body workout. Our customer are most important for us.Your typical program consists of a big, compound exercise or exercises followed by isolation exercise, or exercises. For this particular approach, you're going to chill out on the big lifts and double-down on the little ones. Isolation exercises a great way to hyper-focus and zero in on one particular muscle, but they also help you tap into smaller, more discreet muscle fibers. While a barbell bench press is pounding your pectorials, a cable or dumbbell flye that'e executed from 10-12 slightly different angles is uncovering the fresh spots.<br> If you are looking for best body workout in your area, in affordable price then must visit here.We are best in Gym activities.
-				</p>
-           </div>     
-                         
-        </div>
-    </div>
-	
-	<!-- what we offer -->
-	<div class="conatinAll">
-		<section class="section">
-			<div class="container">
-				<h2 class="h2text">
-					What we offer
-					<div></div>
-				</h2>
-			</div>
-		</section>
-		<!-- <hr class="hline"> -->
-		<section class="section">
-			<div class="container">
-				<div id="main">
-					<ul id="workout">
-						<li id="exerciseCard1" onClick="completedTask(this.id)" class="exerciseCard"><p class="checkedCardMark">&#10003;</p><span id="shoulder"></span><br>3 x 10-12 </li>
-						<li id="exerciseCard2" onClick="completedTask(this.id)" class="exerciseCard"><p class="checkedCardMark">&#10003;</p><span id="back"></span><br>3 x 10-12</li>
-						<li id="exerciseCard3" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="chest"></span><br>3 x 10-12</li>
-						<li id="exerciseCard4" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="bicep"></span><br>3 x 10-12</li>
-						<li id="exerciseCard5" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="leg"></span><br>3 x 10-12</li>
-						<li id="exerciseCard6" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="tricep"></span><br>3 x 10-12</li>
-					</ul>
+		<div  class="container-fluid">
+	        <div class="row">
+	          	<video autoplay loop muted poster="screenshot.jpg" id="headerbackground" class="col-md-12">
+		        	<source src="images/Full Body Superset Workout _ Scott Mathison.mp4" type="video/mp4">
+	  	     	</video>
+	        </div>
+	    </div>
+			
+		<div  class="container-fluid">
+	        <div class="row">
+	          	<div id="aboutus" class="col-md-12 col-sm-6">
+	           		<h1 class="h2data">About Us</h1>
+			    		<p class="aboutus-text">We are best in Gym activities. We provide you enumerous types of body workout. Our customer are most important for us. If you are looking for best body workout in your area, in affordable price then must visit here. We are best in Gym activities. We provide you enumerous types of body workout. Our customer are most important for us.Your typical program consists of a big, compound exercise or exercises followed by isolation exercise, or exercises. For this particular approach, you're going to chill out on the big lifts and double-down on the little ones. Isolation exercises a great way to hyper-focus and zero in on one particular muscle, but they also help you tap into smaller, more discreet muscle fibers. While a barbell bench press is pounding your pectorials, a cable or dumbbell flye that'e executed from 10-12 slightly different angles is uncovering the fresh spots.<br> If you are looking for best body workout in your area, in affordable price then must visit here.We are best in Gym activities.</p>
+	           	</div>     
+	        </div>
+	    </div>
+		
+		<div class="conatinAll" id="whatweoffer">
+			<section class="section">
+				<div class="container">
+					<h2 class="h2text">
+						What we offer
+						<div></div>
+					</h2>
 				</div>
-				<div class="buttons">
-					<div class="statusBtn markallBtn" onClick="markAllCardsAsComplete()"><span>Mark All As Completed</span></div>
-					<div class="statusBtn refreshBtn" onClick="resetAllCards()"><span>Refresh All</span></div>
+			</section>
+			<section class="section">
+				<div class="container">
+					<div id="main">
+						<ul id="workout">
+							<li id="exerciseCard1" onClick="completedTask(this.id)" class="exerciseCard"><p class="checkedCardMark">&#10003;</p><span id="shoulder"></span><br>3 x 10-12 </li>
+							<li id="exerciseCard2" onClick="completedTask(this.id)" class="exerciseCard"><p class="checkedCardMark">&#10003;</p><span id="back"></span><br>3 x 10-12</li>
+							<li id="exerciseCard3" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="chest"></span><br>3 x 10-12</li>
+							<li id="exerciseCard4" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="bicep"></span><br>3 x 10-12</li>
+							<li id="exerciseCard5" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="leg"></span><br>3 x 10-12</li>
+							<li id="exerciseCard6" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="tricep"></span><br>3 x 10-12</li>
+						</ul>
+					</div>
+					<div class="buttons">
+						<div class="statusBtn markallBtn" onClick="markAllCardsAsComplete()"><span>Mark All As Completed</span></div>
+						<div class="statusBtn refreshBtn" onClick="resetAllCards()"><span>Refresh All</span></div>
+					</div>
 				</div>
-			</div>
-		</section>
-	</div>
-       </div>
+			</section>
+		</div>
 
-          
+		<script type="text/javascript">
+			function completedTask(clicked_id) {
+				document.getElementById(clicked_id).className += " clickedExerciseCard";
+				document.getElementById(clicked_id).children[0].style.visibility="visible";
+			}
+			function markAllCardsAsComplete() {
+				var items = document.getElementsByClassName("exerciseCard");
+				for (var i=0; i < items.length; i++) {
+					items[i].className += " clickedExerciseCard";
+					items[i].className += " clickedExerciseCard:hover";
+				}
 
+				var items = document.getElementsByClassName("checkedCardMark");
+				for (var i=0; i < items.length; i++) {
+					items[i].style.visibility = "visible";
+				}
+			}
+			function resetAllCards() {
+				var items = document.getElementsByClassName("exerciseCard");
+				for (var i=0; i < items.length; i++) {
+					items[i].className = " exerciseCard";
+				}
 
-	<script>
+				var items = document.getElementsByClassName("checkedCardMark");
+				for (var i=0; i < items.length; i++) {
+					items[i].style.visibility = "hidden";
+				}
+			}
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			function replaceSpan(muscle, exercises, min, max) {
+				var index = getRandomInt(min, max);
+				var exercise = exercises[index];
+				var li_element = document.getElementById(muscle);
+				li_element.innerHTML = capitalizeFirstLetter(exercise);
+			}
+			function capitalizeFirstLetter(string) {
+				return string.charAt(0).toUpperCase() + string.slice(1);
+			}
 
-	function completedTask(clicked_id) {
-		document.getElementById(clicked_id).className += " clickedExerciseCard";
-		document.getElementById(clicked_id).children[0].style.visibility="visible";
-	};
-	function markAllCardsAsComplete() {
-		var items = document.getElementsByClassName("exerciseCard");
-		for (var i=0; i < items.length; i++) {
-			items[i].className += " clickedExerciseCard";
-			items[i].className += " clickedExerciseCard:hover";
+			$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=13&language=2', function(json) {
+				var item = json.results[Math.floor(Math.random()*(json.results.length))];
+				$('#shoulder').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
+			});
+			$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=11&language=2', function(json) {
+				var item = json.results[Math.floor(Math.random()*(json.results.length))];
+				$('#chest').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
+			});
+			$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=12&language=2', function(json) {
+				var item = json.results[Math.floor(Math.random()*(json.results.length))];
+				$('#back').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
+			});
+			$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=9&language=2', function(json) {
+				var item = json.results[Math.floor(Math.random()*(json.results.length))];
+				$('#leg').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
+			});
 
-		}
-		var items = document.getElementsByClassName("checkedCardMark");
-		for (var i=0; i < items.length; i++) {
-			items[i].style.visibility = "visible";
+			var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
+			var biceps = ["dumbell alternating bicep curls", "hammer curls", "preacher curls", "21(7-7-7)"];
+			var backs = ["cable row", "reverse grip lat pulldown", "kneeling one arm row", "dumbell bent-over row"];
+			var triceps = ["dips", "push-ups (mix)", "push-ups (mix)", "lying triceps extensions"];
+			var chests = ["dumbell bench press", "dumbell bench press", "incline dumbell press", "chest fly"];
+			var legs = ["smith machine box squats", "dumbell lunges", "dumbell lunges", "leg curls"];
 
+			var muscles = [
+				[biceps, "bicep"],
+				[triceps, "tricep"]
+			];
 
-		}
-
-	}
-	function resetAllCards() {
-		var items = document.getElementsByClassName("exerciseCard");
-		for (var i=0; i < items.length; i++) {
-			items[i].className = " exerciseCard";
-		}
-		var items = document.getElementsByClassName("checkedCardMark");
-		for (var i=0; i < items.length; i++) {
-			items[i].style.visibility = "hidden";
-
-
-		}
-	}
-
-	function getRandomInt(min, max) {
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
-
-	function replaceSpan(muscle, exercises, min, max) {
-		var index = getRandomInt(min, max);
-		var exercise = exercises[index];
-		var li_element = document.getElementById(muscle);
-		li_element.innerHTML = capitalizeFirstLetter(exercise);
-	}
-
-	function capitalizeFirstLetter(string) {
-		return string.charAt(0).toUpperCase() + string.slice(1);
-	}
-
-	$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=13&language=2', function(json) {
-		var item = json.results[Math.floor(Math.random()*(json.results.length))];
-		$('#shoulder').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
-	});
-	$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=11&language=2', function(json) {
-		var item = json.results[Math.floor(Math.random()*(json.results.length))];
-		$('#chest').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
-	});
-	$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=12&language=2', function(json) {
-		var item = json.results[Math.floor(Math.random()*(json.results.length))];
-		$('#back').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
-	});
-	$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=9&language=2', function(json) {
-		var item = json.results[Math.floor(Math.random()*(json.results.length))];
-		$('#leg').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
-	});
-
-	var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
-	var biceps = ["dumbell alternating bicep curls", "hammer curls", "preacher curls", "21(7-7-7)"];
-	var backs = ["cable row", "reverse grip lat pulldown", "kneeling one arm row", "dumbell bent-over row"];
-	var triceps = ["dips", "push-ups (mix)", "push-ups (mix)", "lying triceps extensions"];
-	var chests = ["dumbell bench press", "dumbell bench press", "incline dumbell press", "chest fly"];
-	var legs = ["smith machine box squats", "dumbell lunges", "dumbell lunges", "leg curls"];
-
-	var muscles = [
-		[biceps, "bicep"],
-		[triceps, "tricep"]
-	];
-	var i, len;
-	for (i = 0, len = muscles.length; i < len; ++i) {
-		replaceSpan(muscles[i][1], muscles[i][0], 0, 3);
-	};
-
-	</script>
-	
-
-</body>
+			var i, len;
+			for (i = 0, len = muscles.length; i < len; ++i) {
+				replaceSpan(muscles[i][1], muscles[i][0], 0, 3);
+			};
+		</script>
+	</body>
 </html>
