@@ -4,6 +4,20 @@ body {
 	font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+/** Navigation **/
+ul.nav.navbar-right {
+	background:none;
+}
+
+.nav > li > a {
+	padding: 15px 15px;
+	color: #777;
+}
+
+.nav > li > a:hover {
+	color: #000;
+}
+
 .containAll {
 	top: 100px;
 }
