@@ -45,7 +45,7 @@ ul.nav.navbar-right {
 }
 
 .exerciseCard {
-	background: #fafafa;
+	background: #333;
 	height: 150;
 	width: 392px;
 	font-weight: 400;
@@ -56,8 +56,13 @@ ul.nav.navbar-right {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	margin-right: 20px;
-	color: rgba(0, 33, 43, 1);
+	color: #fff;
 	border-radius: 7px;
+}
+
+.exerciseCard > span > a {
+	color:#fff;
+	text-decoration: underline;
 }
 
 ul#workout {

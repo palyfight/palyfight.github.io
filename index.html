@@ -44,12 +44,12 @@
 					<div>
 						<div id="main">
 							<ul id="workout">
-								<li id="exerciseCard1" onClick="completedTask(this.id)" class="exerciseCard"><p class="checkedCardMark">&#10003;</p><span id="shoulder"></span><br>3 x 10-12 </li>
-								<li id="exerciseCard2" onClick="completedTask(this.id)" class="exerciseCard"><p class="checkedCardMark">&#10003;</p><span id="back"></span><br>3 x 10-12</li>
-								<li id="exerciseCard3" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="chest"></span><br>3 x 10-12</li>
-								<li id="exerciseCard4" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="bicep"></span><br>3 x 10-12</li>
-								<li id="exerciseCard5" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="leg"></span><br>3 x 10-12</li>
-								<li id="exerciseCard6" onClick="completedTask(this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="tricep"></span><br>3 x 10-12</li>
+								<li id="exerciseCard1" onClick="completedTask(event, this.id)" class="exerciseCard"><p class="checkedCardMark">&#10003;</p><span id="shoulder"></span><br>3 x 10-12 </li>
+								<li id="exerciseCard2" onClick="completedTask(event, this.id)" class="exerciseCard"><p class="checkedCardMark">&#10003;</p><span id="back"></span><br>3 x 10-12</li>
+								<li id="exerciseCard3" onClick="completedTask(event, this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="chest"></span><br>3 x 10-12</li>
+								<li id="exerciseCard4" onClick="completedTask(event, this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="bicep"></span><br>3 x 10-12</li>
+								<li id="exerciseCard5" onClick="completedTask(event, this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="leg"></span><br>3 x 10-12</li>
+								<li id="exerciseCard6" onClick="completedTask(event, this.id)" class="exerciseCard" ><p class="checkedCardMark">&#10003;</p><span id="tricep"></span><br>3 x 10-12</li>
 							</ul>
 						</div>
 						<div class="buttons">
@@ -62,9 +62,11 @@
 		</div>
 
 		<script type="text/javascript">
-			function completedTask(clicked_id) {
-				document.getElementById(clicked_id).className += " clickedExerciseCard";
-				document.getElementById(clicked_id).children[0].style.visibility="visible";
+			function completedTask(event, clicked_id) {
+				if(event.target.tagName !== "A"){
+					document.getElementById(clicked_id).className += " clickedExerciseCard";
+					document.getElementById(clicked_id).children[0].style.visibility="visible";
+				}
 			}
 			function markAllCardsAsComplete() {
 				var items = document.getElementsByClassName("exerciseCard");
@@ -104,19 +106,19 @@
 
 			$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=13&language=2', function(json) {
 				var item = json.results[Math.floor(Math.random()*(json.results.length))];
-				$('#shoulder').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
+				$('#shoulder').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
 			});
 			$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=11&language=2', function(json) {
 				var item = json.results[Math.floor(Math.random()*(json.results.length))];
-				$('#chest').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
+				$('#chest').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
 			});
 			$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=12&language=2', function(json) {
 				var item = json.results[Math.floor(Math.random()*(json.results.length))];
-				$('#back').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
+				$('#back').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
 			});
 			$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=9&language=2', function(json) {
 				var item = json.results[Math.floor(Math.random()*(json.results.length))];
-				$('#leg').html('<a href="http://wger.de/en/exercise/'+item.id+'/view">'+item.name+'</a>');
+				$('#leg').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
 			});
 
 			var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
