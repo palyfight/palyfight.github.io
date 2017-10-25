@@ -1,6 +1,6 @@
 # palyfight.github.io
 
-This static web page is hosted on [palyfight.github.io](https://palyfight.github.io) as a GitHub Page and we are trying to keep it as simple as possible so that it can be used quickly by anyone. 
+This static web page is hosted on [palyfight.github.io](https://palyfight.github.io) as a GitHub Page and we are trying to keep it as simple as possible so that it can be used quickly by anyone.
 
 ## To see webpage, go to below link:
 
