@@ -168,8 +168,6 @@ span {
 }
 
 .video {
-	min-width: 100%;
-	width: auto;
-	height: 70%;
-	margin-bottom: 20px;
+	width: 100%;
+	margin-top:50px;
 }
