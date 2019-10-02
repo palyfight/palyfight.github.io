@@ -7,4 +7,4 @@ This static web page is hosted on [palyfight.github.io](https://palyfight.github
 https://palyfight.github.io/palyfight.github.io/index.html
 
 ## Purpose
-This will generate a semi-random list of 6 exercices for a simple full body workout. The page is compatible with mobile and desktop by using responsive CSS. 
+This will generate a semi-random list of 6 exercices for a simple full body workout. The page is compatible with mobile and desktop by using responsive CSS. Our goal is to help the world be more in shape by providing an easy way to plan a workout.
