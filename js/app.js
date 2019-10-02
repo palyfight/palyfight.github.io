@@ -4,6 +4,7 @@ function completedTask(event, clicked_id) {
         $("#"+clicked_id).addClass("clickedExerciseCard").children().eq(0).css("visibility", "visible");
     }
 }
+
 function markAllCardsAsComplete() {
     var items = document.getElementsByClassName("exerciseCard");
     for (var i=0; i < items.length; i++) {
@@ -16,6 +17,7 @@ function markAllCardsAsComplete() {
         items[i].style.visibility = "visible";
     }
 }
+
 function resetAllCards() {
     var items = document.getElementsByClassName("exerciseCard");
     for (var i=0; i < items.length; i++) {
@@ -36,6 +38,7 @@ function replaceSpan(muscle, exercises, min, max) {
     var li_element = document.getElementById(muscle);
     li_element.innerHTML = capitalizeFirstLetter(exercise);
 }
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -44,14 +47,17 @@ $.getJSON('https://wger.de/api/v2/exercise/?format=json&category=13&language=2',
     var item = json.results[Math.floor(Math.random()*(json.results.length))];
     $('#shoulder').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
 });
+
 $.getJSON('https://wger.de/api/v2/exercise/?format=json&category=11&language=2', function(json) {
     var item = json.results[Math.floor(Math.random()*(json.results.length))];
     $('#chest').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
 });
+
 $.getJSON('https://wger.de/api/v2/exercise/?format=json&category=12&language=2', function(json) {
     var item = json.results[Math.floor(Math.random()*(json.results.length))];
     $('#back').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
 });
+
 $.getJSON('https://wger.de/api/v2/exercise/?format=json&category=9&language=2', function(json) {
     var item = json.results[Math.floor(Math.random()*(json.results.length))];
     $('#leg').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
