@@ -1,7 +1,7 @@
 function completedTask(event, clicked_id) {
     if(event.target.tagName !== "A"){
-        document.getElementById(clicked_id).className += " clickedExerciseCard";
-        document.getElementById(clicked_id).children[0].style.visibility="visible";
+        $("#"+clicked_id).addClass("clickedExerciseCard");
+        $("#"+clicked_id).addClass("clickedExerciseCard").children().eq(0).css("visibility", "visible");
     }
 }
 function markAllCardsAsComplete() {
