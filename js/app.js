@@ -68,7 +68,7 @@ var biceps = ["dumbell alternating bicep curls", "hammer curls", "preacher curls
 var backs = ["cable row", "reverse grip lat pulldown", "kneeling one arm row", "dumbell bent-over row"];
 var triceps = ["dips", "push-ups (mix)", "push-ups (mix)", "lying triceps extensions"];
 var chests = ["dumbell bench press", "dumbell bench press", "incline dumbell press", "chest fly"];
-var legs = ["smith machine box squats", "dumbell lunges", "dumbell lunges", "leg curls"];
+var legs = ["dumbell lunges", "dumbell lunges", "leg curls"];
 
 var muscles = [
     [biceps, "bicep"],
