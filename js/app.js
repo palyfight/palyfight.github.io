@@ -43,25 +43,17 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=13&language=2', function(json) {
-    var item = json.results[Math.floor(Math.random()*(json.results.length))];
-    $('#shoulder').html('<a href="https://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
-});
+function fetchExercice(element, category) {
+  $.getJSON(`https://wger.de/api/v2/exercise/?format=json&category=${category}&language=2`, function(json) {
+      var item = json.results[Math.floor(Math.random()*(json.results.length))];
+      element.html('<a href="https://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
+  });
+}
 
-$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=11&language=2', function(json) {
-    var item = json.results[Math.floor(Math.random()*(json.results.length))];
-    $('#chest').html('<a href="https://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
-});
-
-$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=12&language=2', function(json) {
-    var item = json.results[Math.floor(Math.random()*(json.results.length))];
-    $('#back').html('<a href="https://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
-});
-
-$.getJSON('https://wger.de/api/v2/exercise/?format=json&category=9&language=2', function(json) {
-    var item = json.results[Math.floor(Math.random()*(json.results.length))];
-    $('#leg').html('<a href="https://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
-});
+fetchExercice($('#shoulder'), 13)
+fetchExercice($('#chest'), 11)
+fetchExercice($('#back'), 12)
+fetchExercice($('#leg'), 9)
 
 var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
 var biceps = ["dumbell alternating bicep curls", "hammer curls", "preacher curls", "21(7-7-7)"];
