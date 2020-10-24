@@ -45,22 +45,22 @@ function capitalizeFirstLetter(string) {
 
 $.getJSON('https://wger.de/api/v2/exercise/?format=json&category=13&language=2', function(json) {
     var item = json.results[Math.floor(Math.random()*(json.results.length))];
-    $('#shoulder').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
+    $('#shoulder').html('<a href="https://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
 });
 
 $.getJSON('https://wger.de/api/v2/exercise/?format=json&category=11&language=2', function(json) {
     var item = json.results[Math.floor(Math.random()*(json.results.length))];
-    $('#chest').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
+    $('#chest').html('<a href="https://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
 });
 
 $.getJSON('https://wger.de/api/v2/exercise/?format=json&category=12&language=2', function(json) {
     var item = json.results[Math.floor(Math.random()*(json.results.length))];
-    $('#back').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
+    $('#back').html('<a href="https://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
 });
 
 $.getJSON('https://wger.de/api/v2/exercise/?format=json&category=9&language=2', function(json) {
     var item = json.results[Math.floor(Math.random()*(json.results.length))];
-    $('#leg').html('<a href="http://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
+    $('#leg').html('<a href="https://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
 });
 
 var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
