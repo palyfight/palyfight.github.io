@@ -46,7 +46,6 @@ function capitalizeFirstLetter(string) {
 function fetchExercice(element, category) {
   $.getJSON(`https://wger.de/api/v2/exercise/?format=json&category=${category}&language=2`, function(json) {
       var item = json.results[Math.floor(Math.random()*(json.results.length))];
-      console.log(element)
       element.html('<a href="https://wger.de/en/exercise/'+item.id+'/view" target="_blank">'+item.name+'</a>');
   });
 }
