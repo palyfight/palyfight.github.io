@@ -29,6 +29,7 @@ function resetAllCards() {
         items[i].style.visibility = "hidden";
     }
 }
+
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -60,21 +61,3 @@ $(document).ready(function() {
   fetchExercice($('#calves'), 14)
   fetchExercice($('#arms'), 8)
 })
-
-
-var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
-var biceps = ["dumbell alternating bicep curls", "hammer curls", "preacher curls", "21(7-7-7)"];
-var backs = ["cable row", "reverse grip lat pulldown", "kneeling one arm row", "dumbell bent-over row"];
-var triceps = ["dips", "push-ups (mix)", "push-ups (mix)", "lying triceps extensions"];
-var chests = ["dumbell bench press", "dumbell bench press", "incline dumbell press", "chest fly"];
-var legs = ["smith machine box squats", "dumbell lunges", "dumbell lunges", "leg curls"];
-
-var muscles = [
-    [biceps, "bicep"],
-    [triceps, "tricep"]
-];
-
-var i, len;
-for (i = 0, len = muscles.length; i < len; ++i) {
-    replaceSpan(muscles[i][1], muscles[i][0], 0, 3);
-};
