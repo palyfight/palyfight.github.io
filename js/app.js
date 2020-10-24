@@ -61,7 +61,6 @@ $(document).ready(function() {
   fetchExercice($('#arms'), 8)
 })
 
-
 var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
 var biceps = ["dumbell alternating bicep curls", "hammer curls", "preacher curls", "21(7-7-7)"];
 var backs = ["cable row", "reverse grip lat pulldown", "kneeling one arm row", "dumbell bent-over row"];
