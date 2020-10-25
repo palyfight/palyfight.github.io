@@ -50,11 +50,15 @@ function fetchExercice(element, category) {
   });
 }
 
-fetchExercice($('#shoulder'), 13)
-fetchExercice($('#chest'), 11)
-fetchExercice($('#back'), 12)
-fetchExercice($('#leg'), 9)
-
+$(document).ready(function() {
+  fetchExercice($('#shoulder'), 13)
+  fetchExercice($('#chest'), 11)
+  fetchExercice($('#back'), 12)
+  fetchExercice($('#leg'), 9)
+  fetchExercice($('#abs'), 10)
+  fetchExercice($('#calves'), 14)
+  fetchExercice($('#arms'), 8)
+})
 
 var shoulders = ["barbell overhead press", "dumbell shoulder press", "front plate raise", "side lateral raise"];
 var biceps = ["dumbell alternating bicep curls", "hammer curls", "preacher curls", "21(7-7-7)"];
