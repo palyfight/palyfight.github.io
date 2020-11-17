@@ -10,4 +10,4 @@ https://palyfight.github.io/palyfight.github.io/index.html
 This will generate a semi-random list of 6 exercices for a simple full body workout. The page is compatible with mobile and desktop by using responsive CSS. Our goal is to help the world be more in shape by providing an easy way to plan a workout. We are a team of dedicated workout enthusiasts and programmers ready to change the way people workout as a whole!
 
 ## Libraries used
-We source our trainings from the website [https://wger.de](https://wger.de/) which offer a lot of good resources like a workout description, the muscles groups used by in the exercise as well a pictures to show proper posture.
+We source our trainings from the website [https://wger.de](https://wger.de/) which offer a lot of good resources like a workout description, the muscles groups used by in the exercise as well a pictures to show proper posture
